@@ -26,7 +26,7 @@ def home():
 
 
 # POST /store data: { name: }
-@app.route('store', methods=['POST'])
+@app.route('/store', methods=['POST'])
 def create_store():
     pass
 
