@@ -1,3 +1,4 @@
+import functools
 user = {"username": "jose", "access_level": "guest"}
 
 
@@ -16,8 +17,10 @@ def get_admin_password():
     return "1234"
 
 
+print(get_admin_password())
+
+
 # -- keeping function name and docstring --
-import functools
 
 
 user = {"username": "jose", "access_level": "guest"}
@@ -37,3 +40,6 @@ def make_secure(func):
 @make_secure
 def get_admin_password():
     return "1234"
+
+
+print(get_admin_password())
