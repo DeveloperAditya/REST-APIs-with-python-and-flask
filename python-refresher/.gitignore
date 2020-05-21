@@ -1,0 +1,14 @@
+Python_refresher_notes
+*.cmproj
+*.tscproj
+*.pyc
+__pycache__
+*.mp4
+*.mkv
+*.hfp
+tempCodeRunnerFile.py
+.vscode/
+.idea/
+videos
+exports
+captions
