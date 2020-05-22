@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling API from JS</title>
+    <script type="text/javascript">
+        function httpGetAsync(theUrl, callback) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = () => {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    callback(xmlHttp.responseText);
+                }
+            }
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+        }
+
+        httpGetAsync('http://localhost:5000/store', (response) => {
+            alert(response);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="myElement">
+        Hello, World!
+    </div>
+</body>
+
+</html>

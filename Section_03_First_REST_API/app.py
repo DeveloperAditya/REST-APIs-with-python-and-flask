@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
@@ -22,7 +22,7 @@ GET - used to send data back only
 # home page
 @app.route('/')
 def home():
-    return 'Hello World!'
+    return render_template('index.html')
 
 
 # POST /store data: { name: }
